@@ -1,0 +1,325 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/widgets/form.dart', 'packages/flutter/src/material/button_bar.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/todo_app_ui_ii_example/widget/todo_form_widget.dart', 'packages/todo_app_ui_ii_example/model/todo.dart', 'packages/provider/src/provider.dart', 'packages/todo_app_ui_ii_example/provider/todos.dart'], (function load__packages__todo_app_ui_ii_example__widget__add_todo_dialog_widget_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__widgets__form$46dart, packages__flutter__src__material__button_bar$46dart, packages__flutter__src__rendering__flex$46dart, packages__flutter__src__painting__strut_style$46dart, packages__todo_app_ui_ii_example__widget__todo_form_widget$46dart, packages__todo_app_ui_ii_example__model__todo$46dart, packages__provider__src__provider$46dart, packages__todo_app_ui_ii_example__provider__todos$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const navigator = packages__flutter__src__widgets__widget_span$46dart.src__widgets__navigator;
+  const form = packages__flutter__src__widgets__form$46dart.src__widgets__form;
+  const dialog = packages__flutter__src__material__button_bar$46dart.src__material__dialog;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const todo_form_widget = packages__todo_app_ui_ii_example__widget__todo_form_widget$46dart.widget__todo_form_widget;
+  const todo$ = packages__todo_app_ui_ii_example__model__todo$46dart.model__todo;
+  const provider$ = packages__provider__src__provider$46dart.src__provider;
+  const todos = packages__todo_app_ui_ii_example__provider__todos$46dart.provider__todos;
+  var add_todo_dialog_widget = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    FormStateL: () => (T.FormStateL = dart.constFn(dart.legacy(form.FormState)))(),
+    GlobalKeyOfFormStateL: () => (T.GlobalKeyOfFormStateL = dart.constFn(framework.GlobalKey$(T.FormStateL())))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))(),
+    VoidToStringL: () => (T.VoidToStringL = dart.constFn(dart.fnType(T.StringL(), [])))(),
+    StringLTovoid: () => (T.StringLTovoid = dart.constFn(dart.fnType(dart.void, [T.StringL()])))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))(),
+    TodosProviderL: () => (T.TodosProviderL = dart.constFn(dart.legacy(todos.TodosProvider)))(),
+    ObjectL: () => (T.ObjectL = dart.constFn(dart.legacy(core.Object)))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 17,
+        [_Location_line]: 26,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 17,
+        [_Location_line]: 27,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 25,
+        [_Location_file]: "file:///E:/todo_app_ui_ii_example-master/lib/widget/add_todo_dialog_widget.dart"
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 30,
+        [_Location_line]: 32,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.constList([C[7] || CT.C7], T._LocationL());
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[6] || CT.C6,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 32,
+        [_Location_file]: "file:///E:/todo_app_ui_ii_example-master/lib/widget/add_todo_dialog_widget.dart"
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: basic.SizedBox.prototype,
+        [Widget__location]: C[5] || CT.C5,
+        [Widget_key]: null,
+        [SingleChildRenderObjectWidget_child]: null,
+        [SizedBox_height]: 8,
+        [SizedBox_width]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onChangedTitle",
+        [_Location_column]: 17,
+        [_Location_line]: 34,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onChangedDescription",
+        [_Location_column]: 17,
+        [_Location_line]: 35,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onSavedTodo",
+        [_Location_column]: 17,
+        [_Location_line]: 37,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.constList([C[10] || CT.C10, C[11] || CT.C11, C[12] || CT.C12], T._LocationL());
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[9] || CT.C9,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 33,
+        [_Location_file]: "file:///E:/todo_app_ui_ii_example-master/lib/widget/add_todo_dialog_widget.dart"
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisSize",
+        [_Location_column]: 13,
+        [_Location_line]: 22,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 13,
+        [_Location_line]: 23,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 13,
+        [_Location_line]: 24,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.constList([C[15] || CT.C15, C[16] || CT.C16, C[17] || CT.C17], T._LocationL());
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[14] || CT.C14,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 21,
+        [_Location_file]: "file:///E:/todo_app_ui_ii_example-master/lib/widget/add_todo_dialog_widget.dart"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "key",
+        [_Location_column]: 11,
+        [_Location_line]: 20,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 21,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.constList([C[20] || CT.C20, C[21] || CT.C21], T._LocationL());
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[19] || CT.C19,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 19,
+        [_Location_file]: "file:///E:/todo_app_ui_ii_example-master/lib/widget/add_todo_dialog_widget.dart"
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "content",
+        [_Location_column]: 9,
+        [_Location_line]: 19,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C[23] = dart.constList([C[24] || CT.C24], T._LocationL());
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[23] || CT.C23,
+        [_Location_name]: null,
+        [_Location_column]: 41,
+        [_Location_line]: 18,
+        [_Location_file]: "file:///E:/todo_app_ui_ii_example-master/lib/widget/add_todo_dialog_widget.dart"
+      });
+    }
+  }, false);
+  var C = Array(25).fill(void 0);
+  var I = ["package:todo_app_ui_ii_example/widget/add_todo_dialog_widget.dart"];
+  add_todo_dialog_widget.AddTodoDialogWidget = class AddTodoDialogWidget extends framework.StatefulWidget {
+    createState() {
+      return new add_todo_dialog_widget._AddTodoDialogWidgetState.new();
+    }
+  };
+  (add_todo_dialog_widget.AddTodoDialogWidget.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    add_todo_dialog_widget.AddTodoDialogWidget.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = add_todo_dialog_widget.AddTodoDialogWidget.prototype;
+  dart.addTypeTests(add_todo_dialog_widget.AddTodoDialogWidget);
+  dart.addTypeCaches(add_todo_dialog_widget.AddTodoDialogWidget);
+  dart.setMethodSignature(add_todo_dialog_widget.AddTodoDialogWidget, () => ({
+    __proto__: dart.getMethods(add_todo_dialog_widget.AddTodoDialogWidget.__proto__),
+    createState: dart.fnType(dart.legacy(add_todo_dialog_widget._AddTodoDialogWidgetState), [])
+  }));
+  dart.setLibraryUri(add_todo_dialog_widget.AddTodoDialogWidget, I[0]);
+  var _formKey = dart.privateName(add_todo_dialog_widget, "_formKey");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  var Widget__location = dart.privateName(framework, "Widget._location");
+  var Widget_key = dart.privateName(framework, "Widget.key");
+  var SingleChildRenderObjectWidget_child = dart.privateName(framework, "SingleChildRenderObjectWidget.child");
+  var SizedBox_height = dart.privateName(basic, "SizedBox.height");
+  var SizedBox_width = dart.privateName(basic, "SizedBox.width");
+  add_todo_dialog_widget._AddTodoDialogWidgetState = class _AddTodoDialogWidgetState extends framework.State$(dart.legacy(add_todo_dialog_widget.AddTodoDialogWidget)) {
+    build(context) {
+      return new dialog.AlertDialog.new({content: new form.Form.new({key: this[_formKey], child: new basic.Column.new({mainAxisSize: flex.MainAxisSize.min, crossAxisAlignment: flex.CrossAxisAlignment.start, children: T.JSArrayOfWidgetL().of([new text.Text.new("Add Todo List", {style: new text_style.TextStyle.new({fontWeight: ui.FontWeight.bold, fontSize: 22.0}), $creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), C[4] || CT.C4, new todo_form_widget.TodoFormWidget.new({onChangedTitle: dart.fn(title => this.setState(dart.fn(() => this.title = title, T.VoidToStringL())), T.StringLTovoid()), onChangedDescription: dart.fn(description => this.setState(dart.fn(() => this.description = description, T.VoidToStringL())), T.StringLTovoid()), onSavedTodo: dart.bind(this, 'addTodo'), $creationLocationd_0dea112b090073317d4: C[8] || CT.C8})]), $creationLocationd_0dea112b090073317d4: C[13] || CT.C13}), $creationLocationd_0dea112b090073317d4: C[18] || CT.C18}), $creationLocationd_0dea112b090073317d4: C[22] || CT.C22});
+    }
+    addTodo() {
+      let isValid = this[_formKey].currentState.validate();
+      if (!dart.test(isValid)) {
+        return;
+      } else {
+        let todo = new todo$.Todo.new({id: new core.DateTime.now().toString(), title: this.title, description: this.description, createdTime: new core.DateTime.now()});
+        let provider = provider$.Provider.of(T.TodosProviderL(), this.context, {listen: false});
+        provider.addTodo(todo);
+        navigator.Navigator.of(this.context).pop(T.ObjectL());
+      }
+    }
+  };
+  (add_todo_dialog_widget._AddTodoDialogWidgetState.new = function() {
+    this[_formKey] = T.GlobalKeyOfFormStateL().new();
+    this.title = "";
+    this.description = "";
+    add_todo_dialog_widget._AddTodoDialogWidgetState.__proto__.new.call(this);
+    ;
+  }).prototype = add_todo_dialog_widget._AddTodoDialogWidgetState.prototype;
+  dart.addTypeTests(add_todo_dialog_widget._AddTodoDialogWidgetState);
+  dart.addTypeCaches(add_todo_dialog_widget._AddTodoDialogWidgetState);
+  dart.setMethodSignature(add_todo_dialog_widget._AddTodoDialogWidgetState, () => ({
+    __proto__: dart.getMethods(add_todo_dialog_widget._AddTodoDialogWidgetState.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)]),
+    addTodo: dart.fnType(dart.void, [])
+  }));
+  dart.setLibraryUri(add_todo_dialog_widget._AddTodoDialogWidgetState, I[0]);
+  dart.setFieldSignature(add_todo_dialog_widget._AddTodoDialogWidgetState, () => ({
+    __proto__: dart.getFields(add_todo_dialog_widget._AddTodoDialogWidgetState.__proto__),
+    [_formKey]: dart.finalFieldType(dart.legacy(framework.GlobalKey$(dart.legacy(form.FormState)))),
+    title: dart.fieldType(dart.legacy(core.String)),
+    description: dart.fieldType(dart.legacy(core.String))
+  }));
+  dart.trackLibraries("packages/todo_app_ui_ii_example/widget/add_todo_dialog_widget.dart", {
+    "package:todo_app_ui_ii_example/widget/add_todo_dialog_widget.dart": add_todo_dialog_widget
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["add_todo_dialog_widget.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAQ6C;IAA2B;;;;;;EACxE;;;;;;;;;;;;;;;;;;;;UAQ4B;AAAY,kDACvB,wBACF,uBACE,oCACsB,2CACY,yCAC7B,yBACR,kBACE,yBACO,0CACkB,8BACb,gFAId,yDACkB,QAAC,SAAU,cAAS,cAAW,aAAQ,KAAK,iEACtC,QAAC,eACnB,cAAS,cAAW,mBAAc,WAAW,kEACpC;IAKtB;;AAGG,oBAAU,AAAS,AAAa;AAEtC,qBAAK,OAAO;AACV;;AAEM,mBAAO,wBACE,AAAM,2CACZ,yBACM,+BACS;AAGlB,uBAAoB,0CAAkB,uBAAiB;AACvC,QAAtB,AAAS,QAAD,SAAS,IAAI;AAEM,QAAjB,AAAY,uBAAT;;IAEjB;;;IAjDM,iBAAW;IACV,aAAQ;IACR,mBAAc;;;EAgDvB","file":"../../../packages/todo_app_ui_ii_example/widget/add_todo_dialog_widget.dart.lib.js"}');
+  // Exports:
+  return {
+    widget__add_todo_dialog_widget: add_todo_dialog_widget
+  };
+}));
+
+//# sourceMappingURL=add_todo_dialog_widget.dart.lib.js.map
